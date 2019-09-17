@@ -1,4 +1,9 @@
+
 console.log('what\'s up danger?')
+
+//we should print the button, as well, so that there isn't a reset button just sitting on the page
+
+//<button type="submit" id="reset"></button>
 
 // const toCelsius =  () => {
 
