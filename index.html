@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,34 +21,40 @@ Temperature to be converted:
 </p>
 </div>
 
-<div class="text-center">
-<input type="number" placeholder="32°" required>
-</div>
+<!--Bootstrap done-->
+<form class="form-inline justify-content-center">
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="temperature" class="sr-only">Password</label>
+      <input type="number" class="form-control" id="temperature" placeholder="32°">
+    </div>
+  </form>
 
 <div class="text-center">
-<p>
-Convert to:
-</p>
+<p>Convert to:</p>
 </div>
 
+<!--Bootstrap done-->
+<div class="radio text-center">
+    <label><input type="radio" name="optradio" id="fahrenheit"checked>Fahrenheit</label>
+  </div>
+  <div class="radio text-center">
+    <label><input type="radio" name="optradio" id="celsius">Celsius</label>
+  </div>
+
+<!--A little bootstrap there-->
 <div class="text-center">
-  <input type="radio" id="fahrenheit" name="drone" value="fahrenheit"
-         checked>
-  <label for="">Fahrenheit</label>
+<button type="button" id ="converter" class="btn btn-light">Convert</button>
 </div>
 
-<div class="text-center">
-  <input type="radio" id="celsius" name="drone" value="celsius">
-  <label for="">Celsius</label>
-</div>
+<p><!--This is a space holder--></p>
 
+<!--A little bootstrap here-->
 <div class="text-center">
-<button type="submit">Convert</button>
+<button type="button" id="reset" class="btn btn-light">Reset</button>
+
 </div>
 
 <div class="text-center" id="conversion-space"></div>
-
-<div class="text-center" id="reset"></div>
 
 <script src=fun.js></script>
 </body>
