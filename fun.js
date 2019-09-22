@@ -1,12 +1,17 @@
 console.log('what\'s up danger?')
 
+// print to dom
 const printToDom = (divId, toPrint) => {
 	document.getElementById(divId).innerHTML = toPrint;
 }
 
+// button variables
+
 const button = document.getElementById("converter");
 const resetButton = document.getElementById("reset");
+const tempEnter = document.getElementById("temperature")
 
+// conversion functions
 
 const toFahrenheit =  () => {
 	let temp = document.getElementById('temperature').value;
@@ -22,21 +27,13 @@ const toCelsius =  () => {
 		printToDom ("conversion-space", words)
 } 
 
-// // This function should determine which conversion should
-// // happen based on which radio button is selected.
+
 const determineConverter = (e) => {
 	if (faRadio.checked === true) {
 		toFahrenheit();
 	} else if (celRadio.checked === true) {
 		toCelsius();
 	}
-	//   if cRadio {
-//	 toCelsius
-//   } if fRadio {
-//	 toFahrenheit
-//   };
-//   printToDom("conversion-space", temp)
-
 }
 
 const clearFields = (e) => {
@@ -46,6 +43,11 @@ const clearFields = (e) => {
 
 button.addEventListener("click", determineConverter);
 resetButton.addEventListener("click", clearFields);
+tempEnter.addEventListener("keyup", function(event) {
+	if (event.key === 13) {
+		event.prevauntDefault();
+		determinetConverter();
+	}
+})
 
-// enter key has to activate functions
-// colors based on instructions
+	// colors based on instructions
