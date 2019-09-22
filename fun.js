@@ -1,26 +1,53 @@
-
 console.log('what\'s up danger?')
 
-//we should print the button, as well, so that there isn't a reset button just sitting on the page
+// print to dom
+const printToDom = (divId, toPrint) => {
+	document.getElementById(divId).innerHTML = toPrint;
+}
 
-//<button type="submit" id="reset"></button>
+// button variables
 
-// const toCelsius =  () => {
+const button = document.getElementById("converter");
+const resetButton = document.getElementById("reset");
+const tempEnter = document.getElementById("temperature")
 
-// }
+// conversion functions
 
-// const toFahrenheit =  () => {
+const toFahrenheit =  () => {
+	let temp = document.getElementById('temperature').value;
+	let math = (temp * 9/5) + 32;
+	let words = `${math}° Fahrenheit`
+	printToDom ("conversion-space", words)
+}
 
-// }
+const toCelsius =  () => {
+ 		let temp = document.getElementById('temperature').value;
+		let math = (temp - 32) * 5/9;
+		let words = `${math}° Celsius`
+		printToDom ("conversion-space", words)
+} 
 
-// // Get a reference to the button element in the DOM
-// const button = document.getElementById("converter");
 
-// // This function should determine which conversion should
-// // happen based on which radio button is selected.
-// const determineConverter = (e) => {
-//   console.log("event", e);
-// }
+const determineConverter = (e) => {
+	if (faRadio.checked === true) {
+		toFahrenheit();
+	} else if (celRadio.checked === true) {
+		toCelsius();
+	}
+}
 
-// // Assign a function to be executed when the button is clicked
-// button.addEventListener("click", determineConverter);
+const clearFields = (e) => {
+	let burn = document.getElementById('temperature').value = '';
+	printToDom ('conversion-space', '')
+}
+
+button.addEventListener("click", determineConverter);
+resetButton.addEventListener("click", clearFields);
+tempEnter.addEventListener("keyup", function(event) {
+	if (event.key === 13) {
+		event.prevauntDefault();
+		determinetConverter();
+	}
+})
+
+	// colors based on instructions
