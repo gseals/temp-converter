@@ -44,10 +44,9 @@ const clearFields = (e) => {
 button.addEventListener("click", determineConverter);
 resetButton.addEventListener("click", clearFields);
 tempEnter.addEventListener("keyup", function(event) {
-	if (event.key === 13) {
-		event.prevauntDefault();
-		determinetConverter();
+	if (event.keyCode === 13) {
+		determineConverter();
 	}
-})
+});
 
 	// colors based on instructions
