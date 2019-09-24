@@ -14,17 +14,33 @@ const tempEnter = document.getElementById("temperature")
 // conversion functions
 
 const toFahrenheit =  () => {
+	let convert = document.getElementById('conversion-space');
 	let temp = document.getElementById('temperature').value;
 	let math = (temp * 9/5) + 32;
-	let words = `${math}° Fahrenheit`
-	printToDom ("conversion-space", words)
+	let words = `${math}° Fahrenheit`;
+	printToDom ("conversion-space", words);
+	if (math > 90) {
+		convert.classList.add("red")
+	} else if (math < 32) {
+		convert.classList.add("blue")
+	} else {
+		convert.classList.add("green")
+	};
 }
 
 const toCelsius =  () => {
+		let convert = document.getElementById('conversion-space');
  		let temp = document.getElementById('temperature').value;
 		let math = (temp - 32) * 5/9;
-		let words = `${math}° Celsius`
-		printToDom ("conversion-space", words)
+		let words = `${math}° Celsius`;
+		printToDom ("conversion-space", words);
+		if (math > 32) {
+			convert.classList.add("red")
+		} else if (math < 0) {
+			convert.classList.add("blue")
+		} else {
+			convert.classList.add("green")
+		};	
 } 
 
 
