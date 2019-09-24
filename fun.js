@@ -9,40 +9,38 @@ const printToDom = (divId, toPrint) => {
 
 const button = document.getElementById("converter");
 const resetButton = document.getElementById("reset");
-const tempEnter = document.getElementById("temperature")
+const tempEnter = document.getElementById("temperature");
+let convert = document.getElementById('conversion-space')
 
 // conversion functions
 
 const toFahrenheit =  () => {
-	let convert = document.getElementById('conversion-space');
 	let temp = document.getElementById('temperature').value;
 	let math = (temp * 9/5) + 32;
 	let words = `${math}° Fahrenheit`;
 	printToDom ("conversion-space", words);
-	if (math > 90) {
-		convert.classList.add("red")
-	} else if (math < 32) {
-		convert.classList.add("blue")
-	} else {
-		convert.classList.add("green")
-	};
-}
+	if (parseFloat(words) > 90) {
+  convert.classList.add("red")
+  } else if (parseFloat(words) < 32) {
+  convert.classList.add("blue")
+  } else {
+  convert.classList.add("green")
+  }
+};
 
 const toCelsius =  () => {
-		let convert = document.getElementById('conversion-space');
  		let temp = document.getElementById('temperature').value;
 		let math = (temp - 32) * 5/9;
 		let words = `${math}° Celsius`;
 		printToDom ("conversion-space", words);
-		if (math > 32) {
-			convert.classList.add("red")
-		} else if (math < 0) {
-			convert.classList.add("blue")
-		} else {
-			convert.classList.add("green")
-		};	
-} 
-
+    if (parseFloat(words) > 32) {
+    convert.classList.add("red")
+    } else if (parseFloat(words) < 0) {
+    convert.classList.add("blue")
+    } else {
+    convert.classList.add("green")
+    } 
+};
 
 const determineConverter = (e) => {
 	if (faRadio.checked === true) {
@@ -57,12 +55,38 @@ const clearFields = (e) => {
 	printToDom ('conversion-space', '')
 }
 
+/* const color = () => {
+  let convert = document.getElementById('conversion-space');
+  if (convert.includes("Fahrenheit")) {
+  console.log("Fahrenheit")
+  } else if (convert.includes("Celsius")) {
+  console.log("Celsius")
+  } */
+/*  if (parseFloat(convert) > 90) {
+  convert.classList.add("red")
+  } else if (parseFloat(convert) < 32) {
+  convert.classList.add("blue")
+  } else {
+  convert.classList.add("green")
+  } } else if (convert.includes("Celsius")) {
+  if (parseFloat(convert) > 32) {
+  convert.classList.add("red")
+  } else if (parseFloat(convert) < 0) {
+  convert.classList.add("blue")
+  } else {
+  convert.classList.add("green")
+  } 
+  } */
+/* }; */
+
+const init = () => {
 button.addEventListener("click", determineConverter);
 resetButton.addEventListener("click", clearFields);
+/* color(); */
 tempEnter.addEventListener("keyup", function(event) {
 	if (event.keyCode === 13) {
 		determineConverter();
 	}
 });
-
-	// colors based on instructions
+};
+init();
