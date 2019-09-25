@@ -19,12 +19,18 @@ const toFahrenheit =  () => {
 	let math = (temp * 9/5) + 32;
 	let words = `${math}° Fahrenheit`;
 	printToDom ("conversion-space", words);
-	if (parseFloat(words) > 90) {
+	if (math >= 90) {
   convert.classList.add("red")
-  } else if (parseFloat(words) < 32) {
+  convert.classList.remove("blue")
+  convert.classList.remove("green")
+  } else if (math <= 32) {
   convert.classList.add("blue")
-  } else {
+  convert.classList.remove("red")
+  convert.classList.remove("green")
+  } else if (math < 90 && math > 32) {
   convert.classList.add("green")
+  convert.classList.remove("blue")
+  convert.classList.remove("red")
   }
 };
 
@@ -33,12 +39,18 @@ const toCelsius =  () => {
 		let math = (temp - 32) * 5/9;
 		let words = `${math}° Celsius`;
 		printToDom ("conversion-space", words);
-    if (parseFloat(words) > 32) {
+    if (math > 32) {
     convert.classList.add("red")
-    } else if (parseFloat(words) < 0) {
+    convert.classList.remove("blue")
+    convert.classList.remove("green")
+    } else if (math < 0) {
     convert.classList.add("blue")
-    } else {
+    convert.classList.remove("red")
+    convert.classList.remove("green")
+    } else if (math <= 32 &&  math >= 0) {
     convert.classList.add("green")
+    convert.classList.remove("blue")
+    convert.classList.remove("red")
     } 
 };
 
