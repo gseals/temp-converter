@@ -7,7 +7,8 @@ An application allowing users to convert temperatures to Celsius or Fahrenheit.
 
 ## Technologies Used
 
-* HTML5, Bootstrap4, CSS, and Javascript
+* HTML5, CSS, and Javascript
+* [Bootstrap](https://getbootstrap.com/): free and open-source CSS framework
 
 
 ## Screenshot(s)
