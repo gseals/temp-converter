@@ -14,22 +14,22 @@ An application allowing users to convert temperatures to Celsius or Fahrenheit.
 ## Screenshot(s)
 
 Page Load
-![Main View]()
+![Main View](https://raw.githubusercontent.com/gseals/temp-converter/master/screenshots/Mainview.png)
 
-Temperature above 90F/32C
-![Red Temp]()
+Temperature at or above 90F/32C appear in red
+![Red Temp](https://raw.githubusercontent.com/gseals/temp-converter/master/screenshots/redtemp.png)
 
-Temperature above 90F/32C
-![Red Temp]()
+Temperature at or above 90F/32C appear in red
+![Red Temp](https://raw.githubusercontent.com/gseals/temp-converter/master/screenshots/redtemp2.png)
 
-Temperatures below 32F/0C
-![Blue Temp]()
+Temperatures at or below 32F/0C appear in blue
+![Blue Temp](https://raw.githubusercontent.com/gseals/temp-converter/master/screenshots/bluetemp2.png)
 
-Temperatures below 32F/0C
-![Blue Temp]()
+Temperatures at or below 32F/0C appear in blue
+![Blue Temp](https://raw.githubusercontent.com/gseals/temp-converter/master/screenshots/bluetemp.png)
 
-All other temperatures
-![Green Temp]()
+All other temperatures appear in green
+![Green Temp](https://raw.githubusercontent.com/gseals/temp-converter/master/screenshots/greentemp.png)
 
 ## Instructions for how to run the project
 
