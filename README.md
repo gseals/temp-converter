@@ -1,39 +1,42 @@
-# Temperature converter
+# Temperature Converter
 
-For this assignment you should be using Bootstrap NO jQuery.
 
-## Requirements
+## Description
 
-Write a program that will convert a temperature from fahrenheit to celsius, or from celsius to fahrenheit.
+An application allowing users to convert temperatures to Celsius or Fahrenheit.
 
-1. In the HTML, have one input field where someone can enter
-  in a temperature.
-2. Create a radio button group where Celsius or Fahrenheit 
-  can be selected as the scale that the number should be 
-  converted to.
-3. Create a block level element that will hold the text of the
-  converted temperature.
-4. Create a button that, when clicked, displays the converted
-  temperature.
-5. Create another button that, when clicked, clears any text
-  in the input field.
-6. Add an event handler to the input field that checks if the 
-  user pressed the enter key, and if that happens, perform
-  the conversion.
-7. If the temperature is greater than 90F/32C the color of 
-  the converted temperature should be red.
-8. If the temperature is less than 32F/0C the color of 
-  the converted temperature should be blue.
-9. For any other temperature, the color should be green.
+## Technologies Used
 
-```js
-const toCelsius =  () => {
+* HTML5, Bootstrap4, CSS, and Javascript
 
-}
 
-const toFahrenheit =  () => {
+## Screenshot(s)
 
-}
+Page Load
+![Main View]()
 
-// Get a reference to the button element in the DOM
-const button = document.getElementById("converter");
+Temperature above 90F/32C
+![Red Temp]()
+
+Temperature above 90F/32C
+![Red Temp]()
+
+Temperatures below 32F/0C
+![Blue Temp]()
+
+Temperatures below 32F/0C
+![Blue Temp]()
+
+All other temperatures
+![Green Temp]()
+
+## Instructions for how to run the project
+
+* Clone down this project from [Github](https://github.com/gseals/temp-converter).
+* Install [http-server](https://www.npmjs.com/package/http-server) from npm.
+* At the root of this project, run the following command: `hs -p 8888`.
+* In your browser, navigate to `https://localhost:8888`;
+
+## Contributors
+
+* [Gabriel Seals](https://github.com/gseals)
