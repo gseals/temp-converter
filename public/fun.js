@@ -67,34 +67,9 @@ const clearFields = (e) => {
 	printToDom ('conversion-space', '')
 }
 
-/* const color = () => {
-  let convert = document.getElementById('conversion-space');
-  if (convert.includes("Fahrenheit")) {
-  console.log("Fahrenheit")
-  } else if (convert.includes("Celsius")) {
-  console.log("Celsius")
-  } */
-/*  if (parseFloat(convert) > 90) {
-  convert.classList.add("red")
-  } else if (parseFloat(convert) < 32) {
-  convert.classList.add("blue")
-  } else {
-  convert.classList.add("green")
-  } } else if (convert.includes("Celsius")) {
-  if (parseFloat(convert) > 32) {
-  convert.classList.add("red")
-  } else if (parseFloat(convert) < 0) {
-  convert.classList.add("blue")
-  } else {
-  convert.classList.add("green")
-  } 
-  } */
-/* }; */
-
 const init = () => {
 button.addEventListener("click", determineConverter);
 resetButton.addEventListener("click", clearFields);
-/* color(); */
 tempEnter.addEventListener("keyup", function(event) {
 	if (event.keyCode === 13) {
 		determineConverter();
