@@ -3,7 +3,7 @@
 
 ## Description
 
-* An application allowing users to convert temperatures to Celsius or Fahrenheit.
+* An application that allows users to convert Fahrenheit to Celsius or Celsius to Fahrenheit..
 
 ## Demo this project
 
