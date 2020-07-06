@@ -5,9 +5,9 @@
 
 * An application that allows users to convert Fahrenheit to Celsius or Celsius to Fahrenheit..
 
-## Demo this project
+## Demo Link
 
-* [Click here](https://temperature-converter-9b0b1.firebaseapp.com/)
+* [Check out the Project](https://temperature-converter-9b0b1.firebaseapp.com/)
 
 ## Technologies Used
 
